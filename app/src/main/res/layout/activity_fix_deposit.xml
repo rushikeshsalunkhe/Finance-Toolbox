@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--<TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coming Soon"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="10dp" />-->
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView_enter_fd_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Fix Deposit Amount"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editText1_enter_fd_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Lumpsump deposit Amount"
+            android:layout_below="@id/textView_enter_fd_amount"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textView_enter_annual_intrest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annual Intrest Rate"
+            android:layout_below="@id/editText1_enter_fd_amount"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editText1_enter_anuual_intrest_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Annual Intrest Rate"
+            android:layout_below="@id/textView_enter_annual_intrest"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textView_enter_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Term "
+            android:layout_below="@id/editText1_enter_anuual_intrest_rate"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editText1_enter_anuual_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter number of year"
+            android:layout_below="@id/textView_enter_term"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText1_enter_anuual_term"
+            android:text=" Submit" />
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/myButton"/>
+
+
+        <TextView
+            android:id="@+id/tv_toast2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/tv_toast"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

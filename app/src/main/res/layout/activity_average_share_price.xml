@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous Share Price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter previous share price"
+            android:layout_below="@id/textView1"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textViewquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous Share quantity"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/editText1"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editTextquantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter the quantity"
+            android:inputType="number"
+            android:layout_below="@id/textViewquantity"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Share Price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/editTextquantity" />
+
+        <EditText
+            android:id="@+id/editTextnewshareprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter new share price"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="86dp"
+            android:inputType="number"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@id/textView2" />
+
+        <TextView
+            android:id="@+id/textViewnewquantity2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new enter the quantity"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/editTextnewshareprice"/>
+
+        <EditText
+            android:id="@+id/editTextnewquantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="enter the quantity"
+            android:layout_below="@id/textViewnewquantity2"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@id/editTextnewquantity"/>
+
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_below="@id/button1"/>
+
+        <!--<Button
+            android:id="@+id/myButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_toast"
+            android:text="Click me!" />-->
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

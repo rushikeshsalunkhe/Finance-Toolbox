@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_200"
+            android:orientation="vertical">
+
+
+
+
+            <TextView
+                android:id="@+id/textView_enter_montly_inv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Investment "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editText1_enter_monthly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Monthly Investment Amount"
+                android:layout_below="@id/textView_enter_montly_inv"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textView_investent_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="investment period "
+                android:textSize="20sp"
+                android:layout_below="@id/editText1_enter_monthly"
+                android:textStyle="bold"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editText1_inv_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Investment Period"
+                android:layout_below="@id/textView_investent_period"
+                android:inputType="number"
+                android:padding="10dp" />
+
+
+            <TextView
+                android:id="@+id/textView_Anuual_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Annual Return"
+                android:textSize="20sp"
+                android:layout_below="@id/editText1_inv_period"
+                android:textStyle="bold"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editText1_anuual_return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" % "
+                android:layout_below="@id/textView_Anuual_return"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText1_anuual_return"
+                android:text=" Submit" />
+
+            <TextView
+                android:id="@+id/tv_toast4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_below="@id/myButton"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>
