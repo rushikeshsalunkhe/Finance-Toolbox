@@ -1,6 +1,7 @@
 package com.seven.finappfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ public class AverageSharePrice extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_average_share_price);
+
+
+
 
 
 
@@ -42,23 +46,23 @@ public class AverageSharePrice extends AppCompatActivity {
                     newQuantity = Double.parseDouble(newQuantityEditText.getText().toString());
                 }
 
-                /*double previousSharePrice = Double.parseDouble(previousSharePriceEditText.getText().toString());
-                double previousQuantity = Double.parseDouble(previousQuantityEditText.getText().toString());
-                double newSharePrice = Double.parseDouble(newSharePriceEditText.getText().toString());
-                double newQuantity = Double.parseDouble(newQuantityEditText.getText().toString());*/
-
                 calculateAveragePriceAndTotalQuantity(previousSharePrice, previousQuantity, newSharePrice, newQuantity);
+
+                final CardView newCardView = findViewById(R.id.new_card_view);
+                newCardView.setVisibility(View.VISIBLE);
             }
             public void calculateAveragePriceAndTotalQuantity(double previousSharePrice, double previousQuantity,double newSharePrice, double newQuantity) {
                 double averagePrice = (previousSharePrice * previousQuantity + newSharePrice * newQuantity) / (previousQuantity + newQuantity);
                 double totalQuantity = previousQuantity + newQuantity;
-                String message = "Average Price: " + averagePrice + "\nTotal Quantity: " + totalQuantity;
-                //Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+                String formattedAveragePrice = String.format("%.2f", averagePrice);
+                String message = "Average Price: " + formattedAveragePrice + "\nTotal Quantity: " + totalQuantity;
                 Toast.makeText(AverageSharePrice.this, message, Toast.LENGTH_SHORT).show();
                 TextView tv_toastt =findViewById(R.id.tv_toast);
                 tv_toastt.setText(message);
             }
+
         });
+
     }
 };
 
